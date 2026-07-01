@@ -1,0 +1,31 @@
+[project]
+name = "dog-breed-image-classifier"
+version = "0.1.0"
+description = "End-to-end deep-learning computer-vision system that classifies dog photos into 120 breeds using transfer learning with TensorFlow/Keras."
+readme = "README.md"
+requires-python = ">=3.10"
+# NOTE: These notebooks are designed to run on Google Colab (free GPU + easy setup)
+# and download their datasets at runtime. This dependency list is provided for
+# reference / local experimentation. A local GPU + TensorFlow GPU setup is
+# recommended for training; see the TensorFlow install guide for platform specifics.
+dependencies = [
+    "tensorflow>=2.13",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scipy",
+    "scikit-learn",
+    "tqdm",
+    "pillow",
+    "ipykernel",
+]
+
+[project.optional-dependencies]
+# The v2 notebook's deployment section builds a Gradio demo app.
+demo = ["gradio"]
+# The video notebook uses TensorFlow Hub for its feature-extractor model.
+hub = ["tensorflow-hub"]
+
+# This is a notebook project, not an installable package — uv only manages the environment.
+[tool.uv]
+package = false

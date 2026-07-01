@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Datasets downloaded/extracted at runtime (large — Stanford Dogs, Kaggle dog-breed).
+# Anchored to /notebooks/ (the notebook working dir) so they don't collide with the
+# tracked /images/ assets on case-insensitive filesystems (Windows/macOS).
+/notebooks/Images/
+/notebooks/images_split/
+/notebooks/dog_vision_data/
+/notebooks/dog-breed-identification/
+*.tar
+*.7z
+
+# Trained or downloaded models (large)
+*.keras
+*.h5
+
+# Runtime-downloaded artifacts (the tracked copies of the custom photos live in /images/)
+/notebooks/dog-photo-*.jpeg
+/notebooks/dog-photos.zip
+/notebooks/stanford_dogs_class_names.txt
+/notebooks/app.py
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
